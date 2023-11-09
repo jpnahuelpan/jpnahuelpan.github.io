@@ -1,0 +1,7 @@
+---
+import MySiteLayout from '../layouts/MySiteLayout.astro';
+import { SITE } from '../config';
+---
+<MySiteLayout title={SITE.title} greeting={SITE.greeting}>
+  <p>{SITE.authorPresentation}</p>
+</MySiteLayout>

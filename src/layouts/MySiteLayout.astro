@@ -1,0 +1,16 @@
+---
+import Head from '../components/Head.astro';
+import Footer from '../components/Footer.astro';
+const { title, greeting } = Astro.props
+---
+<html lang="en">
+  <Head title={title}/>
+  <body>
+    <h1>{title}</h1>
+    <h2>{greeting}<h2/>
+    <article>
+      <slot /> <!-- your content is injected here -->
+    </article>
+    <Footer title={title}/>
+  </body>
+</html>
