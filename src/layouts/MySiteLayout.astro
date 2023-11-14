@@ -1,28 +1,15 @@
 ---
-import Head from '../components/Head.astro';
-import Footer from '../components/Footer.astro';
-import Main from '../components/Main.astro'
-import Header from '../components/Header.astro'
+import Layout from './Layout.astro';
 const { title, greeting } = Astro.props
 ---
-<html lang="en">
-  <Head title={title}/>
-  <body>
-    <Header title={title}/>
-    <Main>
-      <h2>{greeting}<h2/>
-      <article>
-        <slot />
-      </article>
-    <Main/>
-    <Footer />
-  </body>
-</html>
+<Layout title={title}>
+    <h2>{greeting}<h2/>
+    <article>
+      <slot />
+    </article>
+</Layout>
 <style>
   h2 {
     @apply text-xl;
-  }
-  h3 {
-    @apply text-lg;
   }
 </style>
