@@ -5,4 +5,5 @@ export type Site = {
     author: string;
     authorPresentation: string;
     greeting: string;
+    cv: string;
 };

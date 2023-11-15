@@ -1,14 +1,13 @@
 ---
 const { title } = Astro.props
 ---
-<nav id="nav-container">
-  <a href="/">
-    <h1>{title}</h1>
-  </a>
-    
-</nav>
-
-
+<div id="nav-container">
+  <nav>
+    <a href="/">
+      <h1>{title}</h1>
+    </a>
+  </nav>
+</div>
 <style>
   #nav-container {
     @apply mx-auto w-full max-w-3xl px-4 mt-6 mb-6;

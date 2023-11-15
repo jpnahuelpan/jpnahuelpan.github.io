@@ -9,5 +9,6 @@ export const SITE: Site = {
                 months of experience in professional development environments \
                 gained through two internships. I specialize in the design and \
                 implementation of APIs, machine learning models, and databases.",
-    greeting: "Hi, There!"
+    greeting: "Hi, There!",
+    cv: "/pdf/JP_NahuelpanCV.pdf"
 };
