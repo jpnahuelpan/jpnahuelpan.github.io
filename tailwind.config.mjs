@@ -21,6 +21,7 @@ export default {
 				'bgc-blue': '#28384F',
 				'txt-blue': '#D3E6F7',
 				'ln-blue': '#A3B4C6',
+				'bn-light': '#FDFEFF',
 			},
 		},
 	},
