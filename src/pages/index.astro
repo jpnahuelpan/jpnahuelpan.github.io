@@ -1,18 +1,39 @@
 ---
 import MySiteLayout from '../layouts/MySiteLayout.astro';
-import Button from '../components/Button.astro';
+import TextLink from '../components/TextLink.astro';
 import { SITE } from '../config';
 ---
-<MySiteLayout title={SITE.title} greeting={SITE.greeting}>
-  <p>{SITE.authorPresentation}</p>
-  If you want to see my work experience, you can check my
-  <Button ref={SITE.cv}>
-  resume
-  </Button>
-  for more information.
+<MySiteLayout title={SITE.title}>
+  <div id="intro-profile" class="md:flex">
+    <div>
+      <h1>{SITE.profession}<h1/>
+      <p>{SITE.authorPresentation}</p>
+      <p>
+        If you want to see my work experience, you can check my
+        <TextLink ref={SITE.cv}>
+          resume
+        </TextLink>
+        for more information.
+      </p>
+    </div>
+    <div class="md:shrink-0">
+      <img src="/img/Foto.png">
+    </div>
+  </div>
 </MySiteLayout>
 <style>
+  /* #intro-profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  } */
   p {
     @apply mb-6 mt-2;
+  }
+  h1 {
+    @apply text-4xl font-[1000];
+  }
+  img {
+    @apply w-64 object-cover md:w-64 rounded-full;
+    align-self: center;
   }
 </style>

@@ -4,6 +4,6 @@ export type Site = {
     desc: string;
     author: string;
     authorPresentation: string;
-    greeting: string;
+    profession: string;
     cv: string;
 };
