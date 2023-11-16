@@ -1,15 +1,7 @@
 ---
 import Layout from './Layout.astro';
-const { title, greeting } = Astro.props
+const { title } = Astro.props
 ---
 <Layout title={title}>
-    <h2>{greeting}<h2/>
-    <article>
-      <slot />
-    </article>
+    <slot />
 </Layout>
-<style>
-  h2 {
-    @apply text-xl;
-  }
-</style>
