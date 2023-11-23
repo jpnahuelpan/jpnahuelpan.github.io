@@ -4,36 +4,18 @@ import TextLink from '../components/TextLink.astro';
 import { SITE } from '../config';
 ---
 <MySiteLayout title={SITE.title}>
-  <div id="intro-profile" class="md:flex">
-    <div>
-      <h1>{SITE.profession}<h1/>
-      <p>{SITE.authorPresentation}</p>
+  <div class="flex flex-col md:flex-row items-center justify-center">
+    <div class="order-last md:order-first text-center md:text-left">
+      <p class="text-4xl font-[1000]">{SITE.profession}<p/>
+      <p class="mb-6 mt-2">{SITE.authorPresentation}</p>
       <p>
         If you want to see my work experience, you can check my
-        <TextLink ref={SITE.cv}>
-          resume
-        </TextLink>
+        <TextLink ref={SITE.cv}>resume</TextLink>
         for more information.
       </p>
     </div>
-    <div class="md:shrink-0">
-      <img src="/img/Foto.png">
+    <div class="order-first md:order-last shrink-0 mb-4 md:mb-0 md:mr-4">
+      <img class="w-64 object-cover md:w-64 rounded-full" src="/img/Foto.png">
     </div>
   </div>
 </MySiteLayout>
-<style>
-  /* #intro-profile {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  } */
-  p {
-    @apply mb-6 mt-2;
-  }
-  h1 {
-    @apply text-4xl font-[1000];
-  }
-  img {
-    @apply w-64 object-cover md:w-64 rounded-full;
-    align-self: center;
-  }
-</style>

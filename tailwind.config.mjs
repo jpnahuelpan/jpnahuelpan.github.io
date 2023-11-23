@@ -16,13 +16,7 @@ export default {
 		fontFamily: {
 			sans: ['IBM Plex Mono', 'monospace'],
 		},
-		extend: {
-			colors: {
-				'bgc': '#FEFEFE',
-				'txt': '#554C4F',
-				'bn-light': '#9A2F39',
-			},
-		},
+		extend: {},
 	},
 	plugins: [],
 }
