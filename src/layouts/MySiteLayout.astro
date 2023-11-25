@@ -3,5 +3,9 @@ import Layout from './Layout.astro';
 const { title } = Astro.props
 ---
 <Layout title={title}>
-    <slot />
+  <div class="mb-12 flex-auto border-stone-400">
+    <main>
+      <slot />
+    </main>
+  </div>
 </Layout>
