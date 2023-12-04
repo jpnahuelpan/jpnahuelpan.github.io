@@ -16,10 +16,10 @@ const { pdfSrc } = Astro.props;
       const pdfSrc = this.dataset.pdf;
       const button = this.querySelector('button');
       const pdfModal = document.getElementById('pdfModal');
-      const pdfIframe = document.getElementById('pdfIframe');
+      const pdfIframe: HTMLIFrameElement = document.getElementById('pdfIframe') as HTMLIFrameElement;
       button!.addEventListener('click', () => {
         if (pdfIframe && pdfModal) {
-          pdfIframe.src = pdfSrc;
+          pdfIframe.src = pdfSrc!;
           pdfModal.style.display = 'block';
         } else {
           alert("The PDF file cannot be viewed.")
