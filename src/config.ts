@@ -1,7 +1,7 @@
-import type { Site } from "./types";
+import type { Site } from "@/types";
 
 export const SITE: Site = {
-    website: "https://jpnahuelpan.xyz",
+  website: "https://jpnahuelpan.xyz",
     title: "Juan Pablo Nahuelpán",
     desc: "A minimal, personal web using Astro.",
     author: "Juan Pablo Nahuelpán",

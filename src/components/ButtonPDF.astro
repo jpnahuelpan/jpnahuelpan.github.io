@@ -1,0 +1,25 @@
+---
+const { pdfSrc } = Astro.props;
+---
+<astro-btn data-pdf={pdfSrc}>
+  <button class="inline p-0 hover:text-red-700 font-bold underline underline-offset-4 decoration-dashed">
+    <slot/>
+  </button>
+</astro-btn>
+
+
+<script>
+  class AstroBtn extends HTMLElement {
+    constructor() {
+      super();
+
+      const pdfSrc = this.dataset.pdf;
+      const button = this.querySelector('button');
+      button.addEventListener('click', () => {
+        pdfIframe.src = pdfSrc;
+        pdfModal.style.display = 'block';
+      });
+    }
+  }
+  customElements.define('astro-btn', AstroBtn);
+</script>
