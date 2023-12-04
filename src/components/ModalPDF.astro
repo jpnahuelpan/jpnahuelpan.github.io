@@ -19,15 +19,15 @@
       const pdfModal = this.querySelector('div');
       const pdfIframe = this.querySelector('iframe');
 
-      closeModalBtn.addEventListener('click', function () {
-        pdfModal.style.display = 'none';
-        pdfIframe.src = '';
+      closeModalBtn!.addEventListener('click', function () {
+        pdfModal!.style.display = 'none';
+        pdfIframe!.src = '';
       });
 
       window.addEventListener('click', function (event) {
           if (event.target === pdfModal) {
-            pdfModal.style.display = 'none';
-            pdfIframe.src = '';
+            pdfModal!.style.display = 'none';
+            pdfIframe!.src = '';
           }
       });
     }

@@ -15,9 +15,15 @@ const { pdfSrc } = Astro.props;
 
       const pdfSrc = this.dataset.pdf;
       const button = this.querySelector('button');
-      button.addEventListener('click', () => {
-        pdfIframe.src = pdfSrc;
-        pdfModal.style.display = 'block';
+      const pdfModal = document.getElementById('pdfModal');
+      const pdfIframe = document.getElementById('pdfIframe');
+      button!.addEventListener('click', () => {
+        if (pdfIframe && pdfModal) {
+          pdfIframe.src = pdfSrc;
+          pdfModal.style.display = 'block';
+        } else {
+          alert("The PDF file cannot be viewed.")
+        }
       });
     }
   }
