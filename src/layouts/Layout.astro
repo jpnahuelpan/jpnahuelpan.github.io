@@ -1,10 +1,10 @@
 ---
-import Head from '../components/Head.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
+import Head from '@/components/Head.astro';
+import Footer from '@/components/Footer.astro';
+import Header from '@/components/Header.astro';
 const { title } = Astro.props
 ---
-<html class="bg-stone-50 text-stone-600" lang="en">
+<html class="bg-stone-100 text-stone-600" lang="en">
   <Head title={title}/>
   <body class="flex min-h-[100svh] flex-col mx-auto w-full max-w-4xl px-8">
     <Header title={title}/>

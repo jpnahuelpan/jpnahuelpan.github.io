@@ -1,7 +1,8 @@
 ---
-import MySiteLayout from '../layouts/MySiteLayout.astro';
-import TextLink from '../components/TextLink.astro';
-import { SITE } from '../config';
+import MySiteLayout from '@/layouts/MySiteLayout.astro';
+import { SITE } from '@/config';
+import ModalPDF from '@/components/ModalPDF.astro';
+import ButtonPDF from '@/components/ButtonPDF.astro';
 ---
 <MySiteLayout title={SITE.title}>
   <div class="flex flex-col md:flex-row items-center justify-center">
@@ -10,7 +11,7 @@ import { SITE } from '../config';
       <p class="mb-6 mt-2">{SITE.authorPresentation}</p>
       <p>
         If you want to see my work experience, you can check my
-        <TextLink ref={SITE.cv}>resume</TextLink>
+        <ButtonPDF pdfSrc={SITE.cv}>resume</ButtonPDF>
         for more information.
       </p>
     </div>
@@ -18,4 +19,5 @@ import { SITE } from '../config';
       <img class="w-64 object-cover md:w-64 rounded-full shadow-lg shadow-stone-300" src="/img/Foto.png">
     </div>
   </div>
+  <ModalPDF />
 </MySiteLayout>
