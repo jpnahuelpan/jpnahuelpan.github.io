@@ -6,5 +6,11 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://jpnahuelpan.xyz',
-  integrations: [react(), tailwind()]
+  integrations: [
+    react({
+      include: 'react-pdf',
+      experimentalReactChildren: true,
+    }),
+    tailwind(),
+  ],
 });

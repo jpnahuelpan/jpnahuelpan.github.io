@@ -1,8 +1,7 @@
 ---
 import MySiteLayout from '@/layouts/MySiteLayout.astro';
 import { SITE } from '@/config';
-import ModalPDF from '@/components/ModalPDF.astro';
-import ButtonPDF from '@/components/ButtonPDF.astro';
+import Button from '@/components/Button';
 ---
 <MySiteLayout title={SITE.title}>
   <div class="flex flex-col md:flex-row items-center justify-center">
@@ -11,7 +10,7 @@ import ButtonPDF from '@/components/ButtonPDF.astro';
       <p class="mb-6 mr-2">{SITE.authorPresentation}</p>
       <p>
         If you want to see my work experience, you can check my
-        <ButtonPDF pdfSrc={SITE.cv}>resume</ButtonPDF>
+        <Button pdf={SITE.cv} name={"resume"} client:only/>
         for more information.
       </p>
     </div>
@@ -19,5 +18,4 @@ import ButtonPDF from '@/components/ButtonPDF.astro';
       <img class="w-64 object-cover rounded-full shadow-lg shadow-stone-300" src="/img/profile-small.webp" alt="">
     </div>
   </div>
-  <ModalPDF />
 </MySiteLayout>
