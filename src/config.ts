@@ -10,5 +10,5 @@ export const SITE: Site = {
               gained through two internships. I specialize in the design and \
               implementation of APIs, machine learning models, and databases.",
   profession: "Software Engineer",
-  cv: "src/assets/JP_NahuelpanCV.pdf"
+  cv: "pdf/JP_NahuelpanCV.pdf"
 };
